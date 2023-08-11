@@ -38,6 +38,8 @@
 import React from 'react';
 import { useCart } from '../../context/cartContext';
 import Image from 'next/image';
+import ProtectedRoute from "../ProtectedRoute";
+
 import Link from 'next/link';
 import 'react-tippy/dist/tippy.css'
 import { Tooltip } from 'react-tippy';
@@ -45,6 +47,7 @@ const CartPage = () => {
   const { cartItems, removeFromCart } = useCart();
 
   return (
+    <ProtectedRoute>
     <div className='mt-20'>
       <h1 className='text-center text-xl my-10'>Cart </h1>
       {cartItems.length === 0 ? (
@@ -60,7 +63,7 @@ const CartPage = () => {
       ) : (
         <ul className='grid grid-cols-1  lg:grid-cols-4 gap-12 mx-12'>
           {cartItems.map((item, index) => (
-            <li className='border rounded-2xl' key={index}>
+            <li className='hover:scale-105 transition transform duration-500 border rounded-2xl' key={index}>
              <div>
               <Image src={item.image}  
                     alt="product image"
@@ -94,6 +97,7 @@ const CartPage = () => {
         </ul>
       )}
     </div>
+    </ProtectedRoute>
   );
 };
 

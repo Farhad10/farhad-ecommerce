@@ -118,6 +118,7 @@ export default function MyComponent() {
                       className="h-80 rounded-2xl"
                     />
                     <h2 className="text-center text-lg mt-2">{curElem.title}</h2>
+                    <div className="text-center text-lg mt-2">{curElem.price} $</div>
                   </div>
                 </Link>
               );
