@@ -40,7 +40,7 @@ const LoginForm = () => {
       <h1 className='text-2xl text-center'>
         Login Page
       </h1>
-      <div className='px-2'>
+      <div className='px-2 flex'>
       <div className='lg:w-1/2  w-[100%] border rounded-lg  my-10'>
       <div className='flex justify-center'>
       <input
