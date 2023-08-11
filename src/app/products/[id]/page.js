@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useCart } from '../../../context/cartContext';
 import Image from 'next/image';
-
+import ProtectedRoute from "../ProtectedRoute";
 export default function DynamicId({ params: { id } }) {
   const { addToCart,cartItems } = useCart();
   const [data, setData] = useState(null);
@@ -24,7 +24,7 @@ export default function DynamicId({ params: { id } }) {
   console.log('Cart Items:', cartItems);
 
   return (
-    
+    <ProtectedRoute>
     <div className="lg:m-20 mt-20">
       <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
         <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-4/12 xl:w-6/12">
@@ -62,6 +62,7 @@ export default function DynamicId({ params: { id } }) {
     </div>
     </div>
     </div>
+    </ProtectedRoute>
   );
 }
 

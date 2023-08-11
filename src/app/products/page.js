@@ -84,8 +84,8 @@ export default function MyComponent() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className=" h-10 flex justify-center">
-  <label htmlFor="sorting" className="mt-1.5">Sort by: </label>
+      <div className=" h-10  flex justify-center">
+  <label htmlFor="sorting" className="my-1.5">Sort by: </label>
   <select
     id="sorting"
     className="ml-2 dark:bg-gray-700 bg-gray-200 p-1 border rounded"
@@ -100,7 +100,7 @@ export default function MyComponent() {
 
       
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mx-12">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 my-4 mx-12">
         {data !== null ? (
           data
             .filter((curElem) => {
