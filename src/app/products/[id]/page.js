@@ -5,7 +5,7 @@ import { useCart } from '../../../context/cartContext';
 import Image from 'next/image';
 import ProtectedRoute from "../../ProtectedRoute";
 export default function DynamicId({ params: { id } }) {
-  const { addToCart,cartItems } = useCart();
+  const { addToCart,cartItems, notification  } = useCart();
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -27,6 +27,8 @@ export default function DynamicId({ params: { id } }) {
     <ProtectedRoute>
     <div className="lg:m-20 mt-20">
       <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
+    {notification && <div className="notification mt-16">{notification}</div>}
+        
         <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-4/12 xl:w-6/12">
           <Image src={data.image} alt={data.title} width={500} height={500} className="w-full h-96 rounded-lg" />
         </div>

@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.notification {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
 /* Hide the default scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
