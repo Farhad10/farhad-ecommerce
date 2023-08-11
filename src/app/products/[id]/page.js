@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useCart } from '../../../context/cartContext';
 import Image from 'next/image';
-import ProtectedRoute from "../ProtectedRoute";
+import ProtectedRoute from "../../ProtectedRoute";
 export default function DynamicId({ params: { id } }) {
   const { addToCart,cartItems } = useCart();
   const [data, setData] = useState(null);
