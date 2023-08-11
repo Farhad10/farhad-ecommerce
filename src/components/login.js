@@ -40,11 +40,11 @@ const LoginForm = () => {
       <h1 className='text-2xl text-center'>
         Login Page
       </h1>
-      <div className='flex '>
-      <div className='lg:w-1/2 w-[91%] border rounded-lg mx-4 my-12'>
+      <div className='px-2'>
+      <div className='lg:w-1/2  w-[100%] border rounded-lg  my-12'>
       <div className='flex justify-center'>
       <input
-      className='lg:w-2/3 w-11/12  dark:bg-gray-700 bg-gray-200 p-4 mt-12 mb-6 rounded-lg '
+      className='lg:w-2/3 w-11/12  m-auto dark:bg-gray-700 bg-gray-200 p-4 mt-12 mb-6 rounded-lg '
         type="text"
         placeholder="Username"
         value={username}
