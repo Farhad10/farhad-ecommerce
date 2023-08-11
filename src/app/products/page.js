@@ -51,17 +51,17 @@ export default function MyComponent() {
 
   return (
     typeof window !== "undefined" && (
-    <ProtectedRoute>
-    <div className="mt-20 flex">
-      <div className="w-[15%] border-r p-4">
+    // <ProtectedRoute>
+    <div className="lg:mt-20 mt-6 lg:flex">
+      <div className="lg:w-[15%] text-center lg:border-r p-4 ">
         <h2 className="text-xl my-6">Categories</h2>
-       <button className="uppercase hover:scale-110 transition transform duration-500 hover:text-[#c60000]" onClick={() => handleCategoryClick()}> All</button>
+       <button className="uppercase border-b  hover:scale-110 transition transform duration-500 hover:text-[#c60000]" onClick={() => handleCategoryClick()}> All</button>
         {categoryData !== null ? (
           categoryData.map((curElem, index) => {
             return (
               <div key={index}>
                 <button
-                  className="hover:scale-110 transition transform duration-500 text-md mt-2 uppercase hover:text-[#c60000]"
+                  className="hover:scale-110 border-b transition transform duration-500 text-md mt-2 uppercase hover:text-[#c60000]"
                   onClick={() => handleCategoryClick(curElem)}
                 >
                   
@@ -74,18 +74,18 @@ export default function MyComponent() {
           <p>Loading...</p>
         )}
       </div>
-      <div className="w-[85%]">
+      <div className="lg:w-[85%]">
   
-      <div className="flex justify-center">
-      <div className=" mb-10 w-1/2">
+      <div className="lg:flex lg:justify-center ">
+      <div className=" lg:mb-10 mb-4 lg:w-1/2 flex justify-center">
         <input
-          className="outline-none w-2/3 p-3 rounded-lg dark:bg-gray-700 bg-gray-200"
+          className="outline-none lg:w-2/3 w-[90%] p-3  rounded-lg dark:bg-gray-700 bg-gray-200"
           placeholder="Search"
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className=" mb-4  ">
-  <label htmlFor="sorting">Sort by: </label>
+      <div className=" h-10 flex justify-center">
+  <label htmlFor="sorting" className="mt-1.5">Sort by: </label>
   <select
     id="sorting"
     className="ml-2 dark:bg-gray-700 bg-gray-200 p-1 border rounded"
@@ -128,7 +128,7 @@ export default function MyComponent() {
       </div>
       </div>
     </div>
-   </ProtectedRoute>
+  //  </ProtectedRoute>
     )
   );
 }

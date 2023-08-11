@@ -41,19 +41,19 @@ const LoginForm = () => {
         Login Page
       </h1>
       <div className='flex '>
-      <div className='w-1/2 border rounded-lg mx-4 my-12'>
-      <div>
+      <div className='lg:w-1/2 w-full border rounded-lg mx-4 my-12'>
+      <div className='flex justify-center'>
       <input
-      className='w-2/3  dark:bg-gray-700 bg-gray-200 p-4 mt-12 mb-6 mx-32 rounded-lg'
+      className='lg:w-2/3 w-11/12  dark:bg-gray-700 bg-gray-200 p-4 mt-12 mb-6 rounded-lg '
         type="text"
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
       </div>
-      <div>
+      <div className='flex justify-center'>
       <input
-            className='w-2/3  dark:bg-gray-700 bg-gray-200 p-4 my-6 mx-32 rounded-lg'
+            className='lg:w-2/3 w-11/12  dark:bg-gray-700 bg-gray-200 p-4 mt-12 mb-6 rounded-lg'
 
 
         type="password"
@@ -62,10 +62,15 @@ const LoginForm = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       </div>
-      <button className=' my-6 mx-32 relative hover:scale-110 transition transform duration-500 inline-flex items-center justify-center px-4 py-1.5 overflow-hidden cursor-pointer text-white bg-[#c60000] rounded-lg group' type="submit">Login</button>
-      {error && <p>{error}</p>}
+      <button type="submit" className="relative hover:scale-110 lg:mx-32 mx-36 my-6 transition transform duration-500 inline-flex items-center justify-center px-4 py-1.5 overflow-hidden cursor-pointer text-white bg-[#c60000] rounded-lg group">
+<span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-black rounded-full group-hover:w-56 group-hover:h-56"></span>
+<span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 "></span>
+<span className="relative text-lg text-white">Login</span>
+</button>
+      
+      {error && <p className='mx-32 text-[#c60000]'>{error}</p>}
       </div>
-<div className='mx-8 my-16'>
+<div className='mx-8 my-16 lg:block hidden'>
   <Image src="/images/loginImage.webp" width={500} height={500} alt="login image" className='w-full rounded-lg' />
 </div>
 </div>
