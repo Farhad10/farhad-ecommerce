@@ -41,7 +41,7 @@ const LoginForm = () => {
         Login Page
       </h1>
       <div className='px-2'>
-      <div className='lg:w-1/2  w-[100%] border rounded-lg  my-12'>
+      <div className='lg:w-1/2  w-[100%] border rounded-lg  my-10'>
       <div className='flex justify-center'>
       <input
       className='lg:w-2/3 w-11/12  m-auto dark:bg-gray-700 bg-gray-200 p-4 mt-12 mb-6 rounded-lg '
