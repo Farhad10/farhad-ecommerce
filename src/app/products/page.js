@@ -51,7 +51,7 @@ export default function MyComponent() {
 
   return (
     typeof window !== "undefined" && (
-    // <ProtectedRoute>
+    <ProtectedRoute>
     <div className="lg:mt-20 mt-6 lg:flex">
       <div className="lg:w-[15%] text-center lg:border-r p-4 ">
         <h2 className="text-xl my-6">Categories</h2>
@@ -128,7 +128,7 @@ export default function MyComponent() {
       </div>
       </div>
     </div>
-  //  </ProtectedRoute>
+  </ProtectedRoute>
     )
   );
 }
